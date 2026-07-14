@@ -1,0 +1,114 @@
+/* ================================================================
+   A.D.N.D — CSS Reset & Base Styles
+   ================================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* ── Box Sizing ──────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Root ────────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  tab-size: 4;
+}
+
+/* ── Body ────────────────────────────────────────────────────── */
+body {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  font-weight: 400;
+  line-height: 1.65;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color var(--ease-slow), color var(--ease-slow);
+  overflow-x: hidden;
+}
+
+/* ── Headings ────────────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 900; }
+h2 { font-size: clamp(1.875rem, 3.5vw, 3rem); font-weight: 800; }
+h3 { font-size: clamp(1.25rem, 2.5vw, 1.875rem); font-weight: 700; }
+h4 { font-size: clamp(1rem, 2vw, 1.5rem); font-weight: 600; }
+
+/* ── Text ─────────────────────────────────────────────────────── */
+p {
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+
+strong { font-weight: 700; color: var(--text-primary); }
+
+/* ── Links ───────────────────────────────────────────────────── */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--ease-fast);
+}
+
+/* ── Media ───────────────────────────────────────────────────── */
+img, video, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── Lists ───────────────────────────────────────────────────── */
+ul, ol { list-style: none; }
+
+/* ── Form Elements ───────────────────────────────────────────── */
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* ── Scrollbar ───────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-neon);
+  border-radius: var(--radius-full);
+  transition: background var(--ease-base);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold);
+}
+
+/* ── Selection ───────────────────────────────────────────────── */
+::selection {
+  background: rgba(0, 212, 255, 0.25);
+  color: var(--color-neon);
+}
+
+/* ── Focus ───────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--color-neon);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
